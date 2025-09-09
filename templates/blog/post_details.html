@@ -1,0 +1,36 @@
+<!-- templates/post_details.html -->
+
+{% extends 'base.html' %}  <!-- if you're using a base template -->
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card" style="width: 100%;">
+        <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.title }}">
+        <div class="card-body">
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-text">{{ post.content }}</p>
+            <a href="{% url 'show_post' %}" class="btn btn-secondary">all post</a>
+        </div>
+    </div>
+    {% if user.is_authenticated %}
+    <form method="post" enctype="multipart/form-data">
+        
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">post comment</button>
+    </form>
+    {% for comment in comments %}
+    <h3>{{comment.author.username}}</h3>
+    <p>{{comment.content}}</p>
+    {{comment.created_at}}
+
+    {% endfor %}
+    {% endif %}
+</div>
+
+{% endblock %}
+
+
+   
+
+</body>
