@@ -28,9 +28,7 @@
 .btn-success {
     background-color: var(--first-color) !important;
 }
-.card-header {
-    background-color: var(--first-color) !important;
-}
+
 
 footer {
     background-color: var(--first-color);
