@@ -50,3 +50,6 @@ def updated_view(req):
         form = UpdatedForm()
 
     return render(req, "accounts/update_user.html" , {"form" : form})    
+
+def about_view(req):
+    return render (req , "blog/about.html")
