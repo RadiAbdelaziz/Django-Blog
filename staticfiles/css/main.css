@@ -1,0 +1,35 @@
+:root {
+    --first-color :#5F8B4C ;
+    --second-color :#FFDDAB;
+    --third-color :#FF9A9A ;
+    --forth-color :#945034 ;
+    --white-color :#fff ;
+}
+
+.navbar {
+    background-color: var(--forth-color);
+}
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+    border-right: 2px solid var(--first-color);
+    border-left: 2px solid var(--first-color);
+    color: var(--second-color) !important;
+    transition: all 0.3s ease;
+}
+.btn-primary {
+    background-color: var(--second-color) !important;
+    color: black !important;
+    border: none;
+    margin-top: 10px;
+}
+.btn {
+    border: none !important;
+}
+.btn-success {
+    background-color: var(--first-color) !important;
+}
+
+
+footer {
+    background-color: var(--first-color);
+}
